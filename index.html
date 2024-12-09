@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub File Uploader</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>GitHub File Uploader</h1>
+        <div class="auth-section" id="authSection">
+            <input type="text" id="tokenInput" placeholder="Enter GitHub Token" class="input-field">
+            <button id="saveToken" class="btn">Save Token</button>
+        </div>
+        
+        <div class="upload-section">
+            <div class="dropzone" id="dropzone">
+                <div class="dropzone-content">
+                    <img src="assets/upload-icon.svg" alt="Upload" class="upload-icon">
+                    <p>Drag & Drop files here or click to select</p>
+                    <span class="file-limit">Maximum file size: 20MB</span>
+                </div>
+                <input type="file" id="fileInput" class="file-input" multiple>
+            </div>
+            
+            <div class="upload-list" id="uploadList">
+                <!-- Files will be listed here -->
+            </div>
+            
+            <div class="repository-info">
+                <input type="text" id="repoOwner" placeholder="Repository Owner" class="input-field">
+                <input type="text" id="repoName" placeholder="Repository Name" class="input-field">
+                <input type="text" id="repoBranch" placeholder="Branch (default: main)" class="input-field">
+            </div>
+            
+            <button id="uploadButton" class="btn upload-btn">Upload to GitHub</button>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
